@@ -12,12 +12,12 @@ var x = setInterval(() => {
   //find the time from now to the Birthday
   var interval = bDay - now;
   //time calculation for days hour minutes and seconds
-  var days = Math.floor(interval/ (1000 *60*60*24));
-  var hours = Math.floor((interval % (1000*60*60*24))/ (1000*60*60));
-   var munites = Math.floor((interval % (1000*60*60*24))/ (1000*60));
-   var seconds = Math.floor((interval % (1000*60*60*24))/ (1000));
+  var days = (interval/ (1000 * 60 * 60 *24));
+  var hours = ((interval % (1000*60*60*24))/ (1000*60*60));
+   var munites = ((interval % (1000*60*60*24))/ (1000*60));
+   var seconds = ((interval % (1000*60*60*24))/ (1000));
    //display
-   document.getElementById('countdown').innerHTML = ((days)+ (hours)+(munites)+(seconds));
+   document.getElementById('countdown').innerHTML = (now);
   if (interval < 0) {
     clearInterval(x);
     document.getElementById('countdown').innerHTML = "UNTIL NEXT YEAR "
@@ -42,8 +42,8 @@ function App() {
           <h4 className="work"> Teacher</h4>
            <img src={"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"} className="dp" alt="profile"/>
          <h6>27 October 2002</h6>
-         <p id='countdown'></p>
-         <h6 className='justify-content-right'>one month</h6>
+         {/* <p></p> */}
+         <h6 className='justify-content-right'  id='countdown'></h6>
          <br />
         
          
